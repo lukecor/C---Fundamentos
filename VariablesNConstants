@@ -1,0 +1,60 @@
+using System; // Online Class that talked about variables and constants, how to add concatenations on Console.WriteLine functions.
+					
+public class Program
+{
+	public static void Main()
+	{
+		double raio = 4.5;
+		const double PI = 3.14;
+		
+		raio = 5.5;
+		
+		double area = PI * raio * raio;
+		Console.WriteLine("A área é? " + area);
+		
+		// Type of variables:
+		
+		bool estaChovendo = true;
+		Console.WriteLine("Está Chovendo? " + estaChovendo); // Variable bool for binaries functions
+		
+		byte size = byte.MaxValue;
+		Console.WriteLine( size );  // Byte for integers numbers
+		
+		sbyte saldoDeGols = sbyte.MinValue;
+		Console.WriteLine ("Saldo de Gols: " + saldoDeGols); // sbyte means byte numbers with signals (- / + )
+		
+		short salario = short.MaxValue;
+		Console.WriteLine ("Meu futuro salário será: R$ " + salario);
+		
+		int MenorValorInt = int.MinValue;
+		Console.WriteLine("O menor valor int será de: " + MenorValorInt); // int more used on C#
+		
+		uint BrazilianPopulation = 207_600_000;
+		Console.WriteLine("A população brasileira tem um número de: " + BrazilianPopulation); // unsigned int
+		
+		long MenorValorLong = long.MinValue;
+		Console.WriteLine("Menor valor long é: " + MenorValorLong);
+		
+		float ComputerPrice = 1299.99f;  // you have to write the number + f on the atribuction of the float function.
+		Console.WriteLine(" The price of the computer is: " + ComputerPrice);
+		// if you don't write "f" on the function float, the framework will read that you want to atribute the float number to double variable (2x bigger than float), causing bug on the size.
+		
+		decimal StarsDistance = decimal.MaxValue;
+		Console.WriteLine("The distance between the stars are: " + StarsDistance + "km");
+		
+		char letter = 'b';
+		Console.WriteLine(" letter: " + letter); // only one letter
+		
+		string course = "Welcome to my GitHub profile";
+		Console.WriteLine(course); // string for write texts
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}
