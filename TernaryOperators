@@ -1,0 +1,18 @@
+using System; // We say that is an Ternary Operator when you have one expression and 2 operating.
+					
+public class Program
+{
+	public static void Main()
+	{
+		var nota = 7.0;
+		bool bomComportamento = true;
+		var resultado = nota >= 7.0 && bomComportamento ? "Aprovado" : "Reprovado"; 
+    // Look that this case: first we have the expression = 7.0 && bomComportamento. The second is the operating of the variable of the
+    expression if it be true and the last operating if the same is false.
+    
+    
+		Console.WriteLine(resultado); 
+		
+			
+	}
+}
