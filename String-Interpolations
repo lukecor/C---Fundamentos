@@ -1,6 +1,6 @@
 using System; // string interpolations 
 					
-public class Program
+public class Interpolations
 {
 	public static void Main() 
 	{
