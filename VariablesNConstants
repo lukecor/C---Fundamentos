@@ -1,6 +1,6 @@
 using System; // Online Class that talked about variables and constants, how to add concatenations on Console.WriteLine functions.
 					
-public class Program
+public class VariablesNConstans
 {
 	public static void Main()
 	{
