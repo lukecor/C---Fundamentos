@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CursoCSharp.Fundamentos
+{
+    class OperadoresUnarios
+    {
+        public static void Executar()
+        {
+            var valorNegativo = -5;
+            var numero1 = 2;
+            var numero2 = 3;
+            var booleano = true;
+
+            Console.WriteLine(-valorNegativo); // On this case, the variable valorNegativo will turn to be positive. Cause -(-5)=+5;
+            Console.WriteLine(!booleano); // the command ! will reverse the bool value on the console (example if the booleano is false;
+                                          // the console is true;
+            numero1++;
+            Console.WriteLine(numero1);
+
+            --numero1;
+            Console.WriteLine(numero1);
+
+            Console.WriteLine(numero1++ == --numero2); // on this situation, we have the command ==, that compares if one variable 
+                                                       // is equal the other. Notes that on the 2 unary operators, we have two distante 
+                                                       // command. the variable numero1 recieve +1 after the operation on the console
+                                                       // and with the variable numero2 will less -1 before the console operation. 
+                                                       // This happened because of the position of the signals;
+            Console.WriteLine($"{numero1} {numero2}");
+
+
+        }
+    }
+}
