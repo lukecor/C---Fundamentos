@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CursoCSharp.Fundamentos
+{
+    class Conversoes // the most important thing when you are programming in C# is about how much informations you can save on an variable type;
+                     // But in some specifical cases, you have to group data variables. How can you do this? Simple, using conversions;
+    {
+        public static void Executar() // You have two big groups of conversions: explicit and implicit conversions;
+        {
+            int inteiro = 10; 
+            double quebrado;
+            quebrado = inteiro; // Here, we have an implicit conversion. Cause de int type have a small size compared to double size;
+            Console.WriteLine(quebrado);
+
+            double nota = 9.7;
+            int notaTruncada = (int) nota; // In this case, you have to explicit what is the type for conversion, cause the double type is bigger than int type;
+            Console.WriteLine("Nota Truncada: {0}", notaTruncada);
+
+            Console.WriteLine("Digite sua idade: ");
+            string idadeString = Console.ReadLine();
+            int idadeInteiro = int.Parse(idadeString); // For this situation, the string variable was closed on an int.Parse(), expliciting that; 
+                                                       // you want to convert an string to int;
+                                                       
+            Console.WriteLine("Idade Inserida: {0}", idadeInteiro);
+
+            idadeInteiro = Convert.ToInt32(idadeString); // Here, you said that you want to convert the idade (String type) to int type (that it has 32 bits);
+            Console.WriteLine("Resultado: {0}", idadeInteiro);
+
+            Console.WriteLine("Digite o primeiro Número: ");
+            string palavra = Console.ReadLine();
+            int numero1;
+            int.TryParse(palavra, out numero1); // On this expression, you said to try to convert the string palavra to int numero1;
+            Console.WriteLine("Resultado 1: {0}", numero1);
+
+            Console.WriteLine("Digite o segundo Número: ");
+            int.TryParse(Console.ReadLine(), out int numero2); // And here is an "automation" of the example above, that means to read the strig,
+                                                               // try to convert and if is possible convert to int;
+            Console.WriteLine("Resultado 2: {0}", numero2);
+
+        }
+
+    }
+}
