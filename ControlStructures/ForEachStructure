@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CursoCSharp.EstruturaDeControle
+{
+    class EstruturaForEach // percorre do primeiro até o ultimo elemento sem atribuir muitas condições;
+    {
+        public static void Executar()
+        {
+            var palavra = "Opa!";
+
+            foreach (var letra in palavra) // ele vai percorrer cada letra atribuida a var palavra;
+            {
+                Console.WriteLine(letra);
+            }
+
+            var alunos = new String[] { "Ana", "Bia", "Carlos" }; // criei uma rede string com 3 elementos;
+            foreach (var aluno in alunos)
+            {
+                Console.WriteLine(aluno);
+            }            
+
+        } 
+    }
+}
