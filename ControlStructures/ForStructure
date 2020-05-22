@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CursoCSharp.EstruturaDeControle
+{
+    class EstruturaFor // for = quantidade determinada de repetição;
+    {
+        public static void Executar()
+        {
+            // for (int i = 1; i <= 10; i++) {
+            //     Console.WriteLine("O valor de i é: {0}", i);
+            // }
+            // estrutura for = declarar a variável, condicionar a váriavel e tornar ela falsa;
+
+            double somatorio = 0; // novamente gerei uma variável tipo double para usar;
+            string entrada; // o mesmo para a string entrada;
+
+            Console.WriteLine("Informe o tamanho da turma: ");
+            entrada = Console.ReadLine(); // usando a string vou gerar a leitura dessa entrada e armazenar nela;
+            int.TryParse(entrada, out int tamanhoTurma); // transforma entrada em tamanhoTurma;
+
+            for (int i = 1; i <= tamanhoTurma; i++) // crio uma for (ternaria), expressão i = 1, e ela vai somar 1 enquanto for menor ou igual ao tamanho da turma;
+            { // estrutura de controle sempre usar {};
+
+                Console.WriteLine("Informe a nota do aluno: {0}", i); // conforme ele somar 1 ao i=1, ele vai perguntar para cada repetição;
+                entrada = Console.ReadLine(); // vai ler a nota;
+                double.TryParse(entrada, out double notaAtual); // vai transformar entrada em notaAtual;
+
+                somatorio += notaAtual; // vai gerar somatório dos números da notaAtual já condicionada para a somatório;
+                // += acrescenta, diferente de = que atribui / substitui;
+
+            }
+
+            double media = tamanhoTurma > 0 ? somatorio / tamanhoTurma : 0; // condicionei para se o tamanhoTurma for maior que 0 faço a média dos itens;
+            Console.WriteLine("A média da turma é: {0}", media);            // Vai pegar o somatório e dividir pelo tamanho da turma;                                                                             
+            // também posso usar o if else aqui;
+
+        }  
+    }
+}
