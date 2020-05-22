@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CursoCSharp.EstruturaDeControle
+{
+    class EstruturaWhile
+    {
+        public static void Executar()
+        {
+            int palpite = 0; // Criei meu valor int como 0 por enquanto para usar depois;
+            Random Random = new Random(); // Gerei meu valor aleatório por enquanto só para criar;
+            // Não fiz automatico no numeroSecreto porque o Random é uma classe;
+
+            int numeroSecreto = Random.Next(1, 16); // através da variável numeroSecreto vou colocar os dados do Random (1 , >16);
+            bool numeroEncontrado = false; // gerei outra variável para usar depois;
+            int tentativasRestantes = 5; // variável para tentativas que eu ainda tenho;
+            int tentativas = 0; // tentativas que ainda não fiz, por isso 0;
+
+            while (tentativasRestantes > 0 && !numeroEncontrado) // enquanto eu ainda não tentei todas as 5 vezes e meu número não foi encontrado;
+            { // && com bool = falso: sempre vai dar falso a expressão;
+                Console.Write("Insira seu Palpite: "); // ele vai escrever isso;
+                string entrada = Console.ReadLine(); // vai ler o numero que eu digitar;
+                int.TryParse(entrada, out palpite);  // vai transformar ela na variável palpite;
+
+                tentativas++; // vai aumentar o número de tentativas;
+                tentativasRestantes--; // e diminuir as restantes;
+
+                if (numeroSecreto == palpite) // se meu numero secreto for o mesmo que o palpite;
+                {
+                    numeroEncontrado = true; // ele vai reconhecer que o número é certo;
+                    var corAnterior = Console.BackgroundColor; // vai gerar uma variável para cor;
+                    Console.BackgroundColor = ConsoleColor.Green; // vai mudar essa cor para verde;
+                    Console.WriteLine("Número encontrado em {0} tentativas.", tentativas); // vai ler quantas tentativas foi resolvido;
+                    Console.BackgroundColor = corAnterior;
+
+                } else if (palpite > numeroSecreto) { // se o número que ele digitou for maior;
+                    Console.WriteLine("Menor... Tente novamente! "); // vai escrever isto;
+                    Console.WriteLine("Tentativas Restantes: {0} ", tentativasRestantes); // quantas tentativas vão faltar;
+                } else {
+                    Console.WriteLine("Maior... Tente novamente!"); // ou se for menor, vai me dizer isso;
+                    Console.WriteLine("Tentativas Restantes: {0} ", tentativasRestantes); // quantas tentativas faltam;
+
+                }
+            }
+        }
+    }
+}
