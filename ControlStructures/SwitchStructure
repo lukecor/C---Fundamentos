@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CursoCSharp.EstruturaDeControle
+{
+    class EstruturaSwitch
+    {
+        public static void Executar() // outra forma de dizer if else if
+        {
+            Console.WriteLine("Avalie meu atendimento com uma nota de 1 a 5: ");
+            int.TryParse(Console.ReadLine(), out int nota); // tente pegar a variavel lida como string e transforme em int;
+
+
+            switch (nota) // switch diferente do if recebe valores numericos, ja o if recebe bool;
+            {
+                case 0: // caso seja 0;
+                    Console.WriteLine("Péssimo.");
+                    break; // se ele fazer essa linha, ele sai para fora do bloco switch;
+                case 1:
+                case 2:
+                    Console.WriteLine("Ruim ");
+                    break;
+                case 3:
+                    Console.WriteLine("Regular ");
+                    break;
+                case 4:
+                    Console.WriteLine("Bom ");
+                    break;
+                case 5:
+                    Console.WriteLine("Ótimo ");
+                    break;
+                default:
+                    Console.WriteLine("Nota Inválida");
+                    break;
+
+            }
+
+            Console.WriteLine("Fim. ");
+        }
+
+    }
+}
