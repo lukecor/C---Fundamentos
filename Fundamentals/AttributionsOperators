@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CursoCSharp.Fundamentos
+{
+    class OperadoresAtribuicao
+    {
+        public static void Executar()
+        {
+            var num1 = 3; // We say that an Attribution Operator happend when we attribute an number, or letter or boolean code to an variable;
+            num1 = 7; // In this case I attributed the number 7 to my variable num1. Changing the number 3 to 7;
+            num1 += 10; //num1 = num1 + 10;
+            // Above, I attributed the variable 7 to add plus 10. Using the attribution += ( the value plus an number );
+            num1 -= 3; //num1 = num1 - 3;
+            // Like above,  in this case I atributed the variable less 3;
+            num1 *= 5; //num1 = num1 * 5;
+            // the Variable 5 times it;
+            num1 /= 2; //num1 = num1 / 2;// divided by 2;
+             
+            // We call all these atributions the binary attribution, cause we are using 2 operations to associate an variable;
+
+
+            Console.WriteLine(num1);
+
+        }
+
+    }
+}
