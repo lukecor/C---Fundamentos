@@ -1,0 +1,16 @@
+using System; // string interpolations 
+					
+public class Program
+{
+	public static void Main() 
+	{
+		string name = "Computer";
+		string marca = "Dell";
+		double price = 5800.00;
+		
+		Console.WriteLine("The " + name + " from " + marca + " brand is $" + price + "." );
+		// you can interpolate the variables using them with + signal. Using it, you can separate them between the write line.
+		
+		Console.WriteLine("The {0} from {1} brand is ${2}.", name, marca, price); // you can separate the variables with {} with numbers ({0}, {1}, {2}).
+		
+		Console.WriteLine($"The {marca} brand is good!"); // Finally, you can use {} with the variable name to interpolate on the string.
