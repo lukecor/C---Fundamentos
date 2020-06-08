@@ -1,0 +1,16 @@
+using System; // We will use this case to complement the Class Membro;
+
+namespace CursoCSharp.ClassesEMetodos {
+					
+	class Membros {
+	
+		public static void Executar() { // void means that the algorithm (method) will not recieve any data and not will send too;
+		Pessoa sicrano = new Pessoa(); // I am "calling" the class Pessoa on my sicrano Variable 
+		sicrano.Nome = "Renato"; // the variable sicrano will record his data on Nome method;
+		sicrano.Idade = 21; // and the age will recieve the same structure;
+			
+		Console.WriteLine($"{sicrano.Nome} has {sicrano.Idade} years.");
+			
+		}
+	}
+}
