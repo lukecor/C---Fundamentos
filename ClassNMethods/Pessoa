@@ -1,0 +1,11 @@
+using System; // We will use this case to complement the Class Membro (Next Exercise);
+
+namespace CursoCSharp.ClassesEMetodos {
+					
+	class Pessoa {
+		
+		public string Nome; // I can create my own methods, but I have to say what is the kind of this method. In this case I sad that method string recieve an String;
+		public int Idade;   // And on this case Idade is an int method;
+		
+	}
+}
