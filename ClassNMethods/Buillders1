@@ -1,0 +1,23 @@
+using System;
+
+namespace CursoCSharp.ClassesEMetodos {
+	
+	class Carro {
+		public string Modelo; // First I "create" an new object called "Modelo", that is the string type;
+		public string Fabricante; // The same thing than upside, but here The name is "Fabricante";
+		public int Ano; // And the last is equal the other 2 last object, but here is an int variable;
+	}   // all these 3 objects are attributes; 
+	
+					
+	class Construtores { // We have a lot of ways to use these attributes on builders systems, but one of them is: ;
+		
+		public static void Executar() {
+			var carro1 = new Carro(); // I can say that the var will recieve an builder new to atribute the class programmed;
+			carro1.Fabricante = "BMW"; // and here I'm saying what I am attributing;
+			carro1.Modelo = "320i";
+			carro1.Ano = 2017;
+			Console.WriteLine($"{carro1.Fabricante} {carro1.Modelo} {carro1.Ano}");
+							  
+		}
+	}
+}
