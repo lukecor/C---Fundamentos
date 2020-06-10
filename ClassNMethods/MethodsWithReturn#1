@@ -1,0 +1,34 @@
+using System;
+
+namespace CursoCSharp.ClassesEMetodos {
+	
+	class CalculadoraComum { // when your are programming with methods, you have to describe what are the parameters inside the method;
+		public int Somar(int a, int b) { // If the method type is int, is recommended that the parameters from it be int too;
+			return a + b; // but if the parameters are diferent than method type, you have to re-explicit his type;
+		}
+
+		public int Subtrair(int a, int b) {
+			return a - b;
+		}
+		
+		public int Multiplicar(int a, int b) {
+			return a * b;
+		}
+		
+		}
+	class MetodoComRetorno { // Now is time to apply these methods from CalculadoraComum class adding datas;
+		public static void Executar() {
+			var CalculadoraComum = new CalculadoraComum(); // I'm calling the CalculadoraComum class using new constructor;
+			var resultado = CalculadoraComum.Somar(5,5); // Here is one way to "say" what is the a and b variables on the Somar method;
+			
+			Console.WriteLine(resultado);
+			Console.WriteLine(CalculadoraComum.Subtrair(5,7));
+			Console.WriteLine(CalculadoraComum.Multiplicar(4,4));  // but I can say the variable value directly on the Console.WriteLine;
+							  
+			
+									 }
+	
+						   }
+
+				
+}
