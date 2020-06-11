@@ -1,0 +1,33 @@
+using System;
+
+namespace CursoCSharp.ClassesEMetodos {
+
+	class CalculadoraCadeia { // in this second case,  we can create an new class, and stor the datas on memoria;
+		int memoria;
+		
+		public CalculadoraCadeia Somar(int a) { // and here I put 5 diferent methods using the class type with 5 diferent situations;
+			memoria += a;
+			return this;
+		}
+		
+		public CalculadoraCadeia Multiplicar(int a) {
+			memoria *= a;
+			return this; // after the operation, I "called" to return the value to CalculadoraCadeia;
+		}
+		
+		public CalculadoraCadeia Limpar (int a) {
+			memoria = 0;
+			return this;	
+		}
+		public CalculadoraCadeia Imprimir (int a) { // and this happened on 3 diferent situations;
+			Console.WriteLine(memoria); // here I print all the 3 operations;
+			return this;
+		}
+		
+		public int Resultado (int a ) { // until finally return to the first memoria;
+			return memoria;
+		}
+	}
+
+
+}
