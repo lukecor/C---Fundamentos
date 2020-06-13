@@ -1,0 +1,18 @@
+using System;
+
+public class CalculadoraEstatica {
+	public static int Somar(int a, int b) { // When you call an static on your method, you are "fixing" the method on your class;
+		return a + b;
+	}
+	
+}
+					
+	 class MetodoEstatico
+{
+	public static void Executar()
+	{
+		var resultado = CalculadoraEstatica.Somar(2,2); // that is, using static you don't need to stor one class on an variable and using the = new (class), you just "call" the class,
+		Console.WriteLine(resultado);
+		
+	}
+}
