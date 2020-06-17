@@ -1,0 +1,42 @@
+using System;
+
+public class Produto{
+	public string Nome; // like other exercises from this chapter, we started creating atributes;
+	public double Preco;
+	public double Desconto = 0.1;
+	
+	public Produto(string nome, double preco, double desconto) { // Continuing we created an comportament, that recieved other 3 variables;
+		Nome = nome;
+		Preco = preco;
+		Desconto = desconto;
+		
+	}
+	
+	public Produto() { // we created this pattern "void" method to "clean" possible variables on Produto method;
+	
+	}
+	
+	public double CalcularDesconto() {
+		return Preco - Preco * Desconto;	// If we created an attribute called "Desconto", is necessary measure this discount using other comportment;
+	} // So I created an another comportment to calculate discounts / return is the same thing than = ;
+}
+					
+public class AtributosEstaticos // and to started to use all this creation above, we created another class to it;
+{
+	public static void Executar() { // is void for don't recieve other data, and is static to keep the method without alterations;
+		
+		var produto1 = new Produto("Caneta", 3.2 , 0.1); // Then I created 2 variables (two ways to write operations);
+		// variable produto1 recieve the "base" Produto with those names / same thing to produto2;
+		
+		var produto2 = new Produto() { // And these two variables will be used to say what is the price of these two products;
+			Nome = "Borracha",
+			Preco = 5.3,
+			Desconto = 0.1, // If the method Desconto were static, you couldn't acess this variable, cause on static method stituation, you have to call the method directly on the variable (explicit);
+			
+		};
+		
+		Console.WriteLine("Preço com Desconto: {0}", produto1.CalcularDesconto()); // now is time to call the products and calculate them using the method CalcularDesconto (example of;
+		Console.WriteLine("Preço com Desconto: {0}", produto2.CalcularDesconto()); 
+		
+	}
+}
