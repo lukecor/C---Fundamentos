@@ -1,0 +1,17 @@
+using System;
+					
+public class DesafioAtributo // One way to print some attributes don't using other class for it (using the method only) is creating instances;
+{	
+	int a = 10; // first you have your attributes;
+	
+	public static void Main() // then you use the method;
+	{
+		var Valor = new DesafioAtributo(); // In sequence, is important create an instance to stor the attribute (int a) on the method;
+
+		DesafioAtributo desafio = new DesafioAtributo(); // "Calling" the instance again, is time to show it;
+		Console.WriteLine(desafio.a); // finally you print it on the console;
+		
+		
+		
+	}
+}
