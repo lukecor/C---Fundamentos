@@ -1,0 +1,17 @@
+using System;
+					
+public class Params // On this exercise, we will learn about the variable parameters, espcially here: about how can we stor variables using the command "params";
+{	
+	public static void Recepcionar(params string[] pessoas) { // In the command params, I sad to the method Recepcionar stor strings on the variable pessoas;
+		foreach (var pessoa in pessoas) { // And implicitly I created an variable pessoa, And sad: for each variables stored on the pessoa, put then inside the pessoas and...;
+			Console.WriteLine("Olá {0}",pessoa); // and for each from them, print "Olá (pessoa)";
+		}
+	}
+	
+	public static void Main() 
+	{
+		Recepcionar("Pedro", "Manu", "Roger", "Bia"); // And since it is possible use the Recepcionar (cause the method Recepcionar is static), to stor these names;
+	
+		
+		
+	}
