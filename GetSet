@@ -1,0 +1,46 @@
+using System; // In this exercise, we will work with Getters and Setters methods, that can be useffuly when you don't want to show the variables on the compilator;
+
+
+public class Moto 
+{
+	private String Marca; // following the opposite of Public. The private method is usefully to turn the variable privated only to the class;
+	private String Modelo; 
+	private int Cilindrada;
+	
+	public Moto(string marca, string modelo, int cilindrada) { // Commonly, I put an public method to use the class Moto's Variables;
+	Marca = marca;
+	Modelo = modelo;
+	Cilindrada = cilindrada;
+	}
+	public  Moto() {
+		
+	} // turned this method public to use it;
+	public string GetMarca() { // then I put 1 "input" and 1 "output";
+		return Marca; 
+	}
+	
+	public void SetMarca(string Marca) { 
+		Marca = marca;
+	}
+	public string GetModelo() {
+		return Modelo;
+	}
+	public void SetModelo(string Modelo) {
+		Modelo = modelo; 
+	}
+	public int GetCilindrada() {
+		return Cilindrada;
+	}
+	public void SetCilindrada() {
+		Cilindrada = cilindrada;
+	}
+}
+class GetSet
+{
+	public static void Exeutar() {
+		var moto1 = new Moto("Kawasaki", "Ninja ZX-6R", 636);
+	}
+	Console.WriteLine(moto1.GetMarca);
+	Console.WriteLine(moto1.GetModelo);
+	Console.WriteLine(moto1.GetCilindrada);
+}
