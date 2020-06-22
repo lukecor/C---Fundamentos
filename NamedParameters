@@ -1,0 +1,15 @@
+using System;
+					
+public class ParametrosNomeados
+{
+	public static void Formatar(int dia, int mes, int ano) { // on this class, we will work with named parameters. That can be usefully to turn your programm more fluid;
+		Console.WriteLine("{0:D2}/{1:D2}/{2}", dia, mes, ano); // like here, we are working with 3 paramenter: day, month and year;
+    // how much more your program be simple and easier to name, better;
+		
+	}
+	public static void Exeutar() {
+		Formatar(mes: 1, dia: 6, ano: 1996);
+		
+
+	}
+}
