@@ -5,16 +5,16 @@ public class Moto
 {
 	private String Marca; // following the opposite of Public. The private method is usefully to turn the variable privated only to the class;
 	private String Modelo; 
-	private int Cilindrada; // We can turn the variable private only don't writing public on the variable;
+	private int Cilindrada; // We can turn the variable private only don't writing the word "public" on the variable;
 	
-	public Moto(string marca, string modelo, int cilindrada) { // Commonly, I put an public method to use the class Moto's Variables;
-	Marca = marca; 
+	public Moto(string marca, string modelo, int cilindrada) { // Commonly, I put an public method to use the class Moto's Variables, but here the intention is show the private way;
+	Marca = marca; // here you "instance" the variables used on the constructor;
 	Modelo = modelo;
 	Cilindrada = cilindrada;
 	}
 	public  Moto() {
 		
-	} // turned this method public to use it;
+	} // pattern contructor (like void);
 	public string GetMarca() { // then I put 1 "input" and 1 "output"; // get means "read";
 		return Marca; 
 	}
@@ -28,19 +28,19 @@ public class Moto
 	public void SetModelo(string Modelo) {
 		Modelo = modelo; 
 	}
-	public int GetCilindrada() {
+	public int GetCilindrada() { // they will read the object Cilindrada;
 		return Cilindrada;
 	}
-	public void SetCilindrada() {
+	public void SetCilindrada() { // And show cilindrada (constructor);
 		Cilindrada = cilindrada;
 	}
 }
 class GetSet
 {
 	public static void Exeutar() {
-		var moto1 = new Moto("Kawasaki", "Ninja ZX-6R", 636);
+		var moto1 = new Moto("Kawasaki", "Ninja ZX-6R", 636); // "calling" Moto constructor;
 	}
 	Console.WriteLine(moto1.GetMarca);
 	Console.WriteLine(moto1.GetModelo);
-	Console.WriteLine(moto1.GetCilindrada);
+	Console.WriteLine(moto1.GetCilindrada); // and "call" the Object (inside this object (Get), will appear the instances;
 }
