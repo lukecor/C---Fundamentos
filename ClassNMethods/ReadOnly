@@ -1,0 +1,28 @@
+using System;
+					
+public class ReadOnly
+{
+	public class Cliente
+	{
+		public string Nome;
+		 DateTime Nascimento; // 2 attributes;
+		// public readonly, this is an way when you want to only read or don't change an attribute inside the class, using the command readonly;
+		
+		public Cliente(string nome, DateTime nascimento) // 1 constructor;
+	{	    Nome = nome;
+			Nascimento = nascimento;
+	}
+		public string GetDataDeNascimento() 
+	{		return string.Format("{0},{1},{2}", Nascimento.Day, Nascimento.Month, Nascimento.Year);
+	 
+	}
+	}
+	public static void Main()
+	{
+		var novoCliente = new Cliente("Lucas", new DateTime(2000, 4, 18));
+		
+		Console.WriteLine(novoCliente.Nome);
+		Console.WriteLine(novoCliente.GetDataDeNascimento());
+		
+	}
+}
