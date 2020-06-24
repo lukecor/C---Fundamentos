@@ -5,21 +5,21 @@ public class Moto
 {
 	private String Marca; // following the opposite of Public. The private method is usefully to turn the variable privated only to the class;
 	private String Modelo; 
-	private int Cilindrada;
+	private int Cilindrada; // We can turn the variable private only don't writing public on the variable;
 	
 	public Moto(string marca, string modelo, int cilindrada) { // Commonly, I put an public method to use the class Moto's Variables;
-	Marca = marca;
+	Marca = marca; 
 	Modelo = modelo;
 	Cilindrada = cilindrada;
 	}
 	public  Moto() {
 		
 	} // turned this method public to use it;
-	public string GetMarca() { // then I put 1 "input" and 1 "output";
+	public string GetMarca() { // then I put 1 "input" and 1 "output"; // get means "read";
 		return Marca; 
 	}
 	
-	public void SetMarca(string Marca) { 
+	public void SetMarca(string Marca) { // set means " do ";
 		Marca = marca;
 	}
 	public string GetModelo() {
