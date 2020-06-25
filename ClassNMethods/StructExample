@@ -1,0 +1,43 @@
+using System;
+
+interface Ponto {
+	void MoverNaDiagonal(int delta);
+}
+struct Coordenada: Ponto { // I created an struct called Coordenada;
+	public int X; // that it has attributes;
+	public int Y;
+	
+	public Coordenada(int x, int y) { // ... and constructor;
+			X = x;
+			Y = y;
+	}
+	public void MoverNaDiagonal(int delta) { // Methods;
+			Y += delta;
+			X += delta;
+	}
+}
+
+public class ExemploStruct
+{
+	
+	public static void Main()
+	{
+		Coordenada coordenadaInicial; // Struct is like Class;
+		coordenadaInicial.Y = 2; // "Called 2 variables above";
+		coordenadaInicial.X = 2;
+		
+		Console.WriteLine("Coordenada Inicial: ");
+		Console.WriteLine(" X = {0}", coordenadaInicial.X);
+		Console.WriteLine(" Y = {0}", coordenadaInicial.Y); // printed on the console;
+		
+		var coordenadaFinal = new Coordenada(x: 9, y: 1); // Called again the struct, but instancing it and put the value directly on the var;
+		coordenadaFinal.MoverNaDiagonal(10); // put directly the value on the variable;
+		
+		
+		Console.WriteLine("Coordenada Final: ");
+		Console.WriteLine(" X = {0}", coordenadaFinal.X);
+		Console.WriteLine(" Y = {0}", coordenadaFinal.Y); // Printed it again
+		
+		
+	}
+}
