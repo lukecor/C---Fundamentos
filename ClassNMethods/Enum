@@ -1,0 +1,22 @@
+using System;
+
+	public enum Genero { Acao, Aventura, Terror, Comedia, Animacao }; // The reserved word "enum" can be usefull when you want to enumerate a group of variables;
+
+
+public class Filme
+{
+	public string Titulo;
+	public Genero GeneroDoFilme;
+	
+	
+	public static void Main()
+	{
+		
+	}
+}
+public class ExemploEnum
+{
+	int id = (int)Genero.Animacao; // This is the conversion from enum Genero to Animacao;
+	Console.WriteLine(id);
+	
+}
