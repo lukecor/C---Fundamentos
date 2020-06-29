@@ -1,0 +1,39 @@
+using System;
+
+public class Dependente 
+{
+	public string Nome;
+	public int Idade;
+	
+}
+public class ValueVsRef
+{
+	public static void Main()
+	{
+		int Numero = 3;
+		int copiaNumero = Numero;
+		Console.WriteLine("{0} {1}", Numero, copiaNumero);
+		
+		Numero++;
+		
+		Console.WriteLine("{0} {1}", Numero, copiaNumero);
+		
+		Dependente dep = new Dependente 
+		{
+			Nome = "Beto",
+			Idade = 20
+			
+		};
+		
+		Dependente copiaDep = dep;
+		
+		Console.WriteLine("{0} {1}", dep.Nome, copiaDep.Idade);
+		Console.WriteLine("{0} {1}", dep.Nome, copiaDep.Idade);
+		
+		copiaDep.Nome = "Renato";
+		dep.Idade = 21;
+		
+		Console.WriteLine("{0} {1}", dep.Nome, copiaDep.Idade);
+		Console.WriteLine("{0} {1}", dep.Nome, copiaDep.Idade);
+	}
+}
