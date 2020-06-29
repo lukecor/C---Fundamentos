@@ -1,0 +1,28 @@
+using System;
+
+	public class ParametrosPorRef
+{
+		
+	public static void AlterarRef(ref int numero) // I declared ref on the operation
+	{
+		numero = numero + 1000; // ref is type;
+	
+	}
+	public static void AlterarOut(out int numero) 
+	{
+		numero = 0;
+		numero = numero + 15;
+	}
+	
+	public static void Main()
+	{
+		int a = 3;
+		AlterarRef(ref a); // I called ref on this method, ref can be usefull when you want to ligate diferents variables
+		Console.WriteLine(a); // in this case I put one ref between int in main, and ref int numero on AlterarRef, that has the object numero;
+		
+		int b = 2;
+		AlterarOut(out b); 
+		Console.WriteLine(b); // and out only recieve the object, just "transmit" it;
+		
+	}
+}
