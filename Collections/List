@@ -21,8 +21,8 @@ class ColecoesList
 	{
 	var livro = new Produto("Skyrim ", 234.50);
 		
-	var carrinho = new List<Produto>();     // this will use the System.Collections above, class list type produto;
-	// <> means generic;
+	var carrinho = new List<Produto>();     // this will use the System.Collections above, class list type produto. He will stors only datas that has the same size than class Produto;
+	// <> means generic. This can be usefull when you don't have the exacly numbers of data that you want to stor;
 	carrinho.Add(livro);
 		
 	var combo = new List<Produto>
@@ -31,7 +31,7 @@ class ColecoesList
 		new Produto("8ª Temporada Game of Thrones", 99.0),
 		new Produto("Poster", 10)
 	};
-		carrinho.AddRange(combo); {
+		carrinho.AddRange(combo); { // you can stor the datas using .Add. Here we used Add.Range to stor many datas from combo above;
 		Console.WriteLine(carrinho.Count);
 		carrinho.RemoveAt(3);
 	}
