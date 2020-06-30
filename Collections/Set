@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+
+
+public class Produto 
+{
+	public string Nome;
+	public double Preco;
+	
+	public Produto(string nome, double preco)
+	{
+		Nome = nome;
+		Preco = preco;
+	}
+}
+
+class ColecoesSet 
+{
+	
+	public static void Executar() 
+	{
+	var livro = new Produto("Skyrim ", 234.50);
+		
+	var carrinho = new HashSet<Produto>(); // In the case of HashSet you cannot be indexed: cannot be repeated, remmoved, anexed;
+		carrinho.Add(livro);
+		
+	var combo = new HashSet<Produto>
+	{
+		new Produto("Camisa", 29.90),
+		new Produto("8ª Temporada Game of Thrones", 99.0),
+		new Produto("Poster", 10)
+	};
+		carrinho.UnionWith(combo); // in hashset you don't add nothing, you have to create an new combo like above;
+		Console.WriteLine(carrinho.Count);
+		
+	foreach(var item in carrinho)
+	{
+	Console.WriteLine($"{item.Nome} {item.Preco}");
+	}
+ }
+}
