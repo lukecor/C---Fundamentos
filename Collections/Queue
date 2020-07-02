@@ -9,14 +9,14 @@ public class Queue
 	{
 		var Fila = new Queue<string>();
 		
-		Fila.Enqueue("Fulano");      // Enqueue means add items on the Queue;
+		Fila.Enqueue("Fulano");      // Enqueue means add items on the  generic Queue;
 		Fila.Enqueue("Sicrano");
 		Fila.Enqueue("Beltrano");
 		
-		Console.WriteLine(Fila.Peek());
-		Console.WriteLine(Fila.Count);
+		Console.WriteLine(Fila.Peek()); // Peek means that the console will print the first stored variable;
+		Console.WriteLine(Fila.Count); // and count will be used for count the number of the variables from the list;
 		
-		Console.WriteLine(fila.Dequeue());
+		Console.WriteLine(fila.Dequeue()); // Dequeue is the reverse of queue, he will "exclude" the first name named on the queue;
 		Console.WriteLine(fila.Count);
 		
 		foreach(var pessoa in Fila) 
@@ -27,10 +27,10 @@ public class Queue
 		var Salada = new Queue();
 		salada.Enqueue(3);
 		salada.Enqueue("Item");
-		salada.Enqueue(true);
+		salada.Enqueue(true); // the same situations like above, but here the class isn't generic;
 		salada.Enqueue(3.14);
 		
-		Console.WriteLine(salada.Contains("Item"));
+		Console.WriteLine(salada.Contains("Item")); // and Contains means "if on the salada variable has the string item";
 		
 
 
