@@ -1,0 +1,19 @@
+// The Example uses the ColecoesList on this archive;
+
+
+using System;
+					
+public class Program
+{
+	public static void Executar()
+	{
+		var p1 = new Produto("Caneta", 1.89);
+		var p2 = new Produto("Caneta", 1.89);
+		var p3 = p2;
+		
+		Console.WriteLine(p1 == p2); // in this case is false, cause even if the variables stors the same datas, they are stored on diferents variables;
+		Console.WriteLine(p3 == p2); // except this, that will say "true", cause the var p2 is stored using references. So the same variables are from the same local;
+	
+		Console.WriteLine(p1.Equals(p2)); // this is other way to say the same thing like above, but this is an method Equals;
+	}
+}
