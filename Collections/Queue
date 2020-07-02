@@ -1,0 +1,39 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+					
+public class Queue
+{
+	
+	public static void Main()
+	{
+		var Fila = new Queue<string>();
+		
+		Fila.Enqueue("Fulano");      // Enqueue means add items on the Queue;
+		Fila.Enqueue("Sicrano");
+		Fila.Enqueue("Beltrano");
+		
+		Console.WriteLine(Fila.Peek());
+		Console.WriteLine(Fila.Count);
+		
+		Console.WriteLine(fila.Dequeue());
+		Console.WriteLine(fila.Count);
+		
+		foreach(var pessoa in Fila) 
+		{
+		Console.WriteLine(pessoa);
+		
+		}
+		var Salada = new Queue();
+		salada.Enqueue(3);
+		salada.Enqueue("Item");
+		salada.Enqueue(true);
+		salada.Enqueue(3.14);
+		
+		Console.WriteLine(salada.Contains("Item"));
+		
+
+
+		
+	}
+}
