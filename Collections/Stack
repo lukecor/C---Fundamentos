@@ -1,0 +1,35 @@
+using System;
+using System;
+using System.Collections;
+using System.Text;
+
+
+public class ColecoesStack // Stack is like queue, but does the reverse of it;
+{
+	
+	public static void Executar()
+	{
+	 var pilha = new Stack();
+		
+		pilha.Push(3);
+		pilha.Push("a");
+		pilha.Push(true);
+		pilha.Push(3.14f);
+		
+		foreach( var item in pilha)
+		{
+			Console.Write(" {0}", item); // He will print the datas from pilha starting with the last data;
+		}
+		
+		Console.WriteLine($"/nPop: {pilha.Pop()}"); // if you print on the console, will note that the last data from pilha was removed using .Pop;
+		foreach( var item in pilha)
+		{
+		Console.Write(" {0}", item);
+		}
+		Console.WriteLine($"/nPeek: {pilha.Peek()}");
+		Console.WriteLine(pilha.Count); // and the command peek will not remove, just "push";
+		
+		}
+		
+	}
+}
