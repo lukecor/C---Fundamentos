@@ -13,7 +13,7 @@ public class ColecoesStack // Stack is like queue, but does the reverse of it;
 		
 		pilha.Push(3);
 		pilha.Push("a");
-		pilha.Push(true);
+		pilha.Push(true); // push means "add" on stack, like enqueue;
 		pilha.Push(3.14f);
 		
 		foreach( var item in pilha)
