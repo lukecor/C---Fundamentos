@@ -12,7 +12,7 @@ using System.Collections;
 				true // on array list you can stor many differents typed variables;
 			};
 			
-			arraylist.Add(3.14);
+			arraylist.Add(3.14); // This is one way that you can add some data in arraylist;
 			
 			foreach (var item in arraylist) 
 			{
