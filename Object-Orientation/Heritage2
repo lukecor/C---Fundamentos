@@ -1,0 +1,69 @@
+using System;
+
+
+public class Carro 
+{
+	protected readonly int VelocidadeMaxima; 
+	int VelocidadeAtual;
+	
+	public Carro(int velocidadeMaxima)
+	{
+		VelocidadeMaxima = velocidadeMaxima;
+	}
+	protected int AlterarVelocidade(int delta)
+	{
+		int novaVelocidade = VelocidadeAtual + delta;
+		if(novaVelocidade < 0) {
+			VelocidadeAtual = 0;
+		}	else if (novaVelocidade > VelocidadeMaxima) {
+			VelocidadeAtual = VelocidadeMaxima;
+		}	else {VelocidadeAtual = novaVelocidade;}
+		return VelocidadeAtual;
+	}	
+	public virtual int Acelerar() // That is the method that was used the word virtual;
+	{
+		return AlterarVelocidade(5);
+	}
+	public virtual int Frear()
+	{
+		return AlterarVelocidade(-5);
+	}
+}
+public class Uno : Carro {
+	public Uno() : base(200) { // When you don't have an pattern constructor you have to call explicitly the base constructor;
+		
+	}
+}
+public class Ferrari : Carro {
+	public Ferrari() : base(350) {
+	}
+	public override int Acelerar() { // override can change the original variable when the father variable recieve the name "virtual" on his method;
+	return AlterarVelocidade(15);		
+	}
+	public override int Frear() {
+	return AlterarVelocidade(-15);
+	}
+	
+}
+public class Heritage
+{
+	public static void Main()
+	{
+		Console.WriteLine("Carro Uno ...");
+		Uno carro1 = new Uno();
+		Console.WriteLine(carro1.Acelerar());
+		Console.WriteLine(carro1.Acelerar());
+		Console.WriteLine(carro1.Frear());
+		Console.WriteLine(carro1.Frear());
+		Console.WriteLine("Carro Ferrari ...");
+		Ferrari carro2 = new Ferrari();
+		Console.WriteLine(carro2.Acelerar());
+		Console.WriteLine(carro2.Acelerar());
+		Console.WriteLine(carro2.Frear());
+		Console.WriteLine(carro2.Frear());
+		
+		
+		
+	
+	}
+}
