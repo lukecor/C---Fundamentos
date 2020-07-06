@@ -1,0 +1,51 @@
+using System;
+
+
+public class Carro 
+{
+	protected readonly int VelocidadeMaxima; // protected is used when you want to use the heritage on your programm;
+	int VelocidadeAtual;
+	
+	public Carro(int velocidadeMaxima)
+	{
+		VelocidadeMaxima = velocidadeMaxima;
+	}
+	protected int AlterarVelocidade(int delta)
+	{
+		int novaVelocidade = VelocidadeAtual + delta;
+		if(novaVelocidade < 0) {
+			VelocidadeAtual = 0;
+		}	else if (novaVelocidade > VelocidadeMaxima) {
+			VelocidadeAtual = VelocidadeMaxima;
+		}	else {VelocidadeAtual = novaVelocidade;}
+		return VelocidadeAtual;
+	}	
+	public int Acelerar()
+	{
+		return AlterarVelocidade(5);
+	}
+	public int Frear()
+	{
+		return AlterarVelocidade(-5);	// On the first class I put the parameters that I will use on my car simulation;
+	}
+}
+public class Uno : Carro {
+	public Uno() : base(200) {	// Then I used the tool that we use to call the "father parameter", like associate the class Uno with the Class carro on the heritage;
+	// this is an explicit call, cause on your pattern constructor you call the "father parameter";
+		
+	}
+}
+public class Heritage
+{
+	public static void Main()
+	{
+		Console.WriteLine("Carro Uno ...");
+		Uno carro1 = new Uno();
+		Console.WriteLine(carro1.Acelerar());
+		Console.WriteLine(carro1.Acelerar());
+		Console.WriteLine(carro1.Frear());
+		Console.WriteLine(carro1.Frear());
+		
+	
+	}
+}
