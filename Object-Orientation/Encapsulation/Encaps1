@@ -1,0 +1,51 @@
+	using System; // This project was created from an online .net Fiddle, and in the course is used the framework Visual Studio. Because the complexibiblity of this programm, I have to explain it;
+// On the course (Cod3r), he creates an programm, then he goes on our solution and click "add new classes library" and put the programm name (namespace);
+// Then he goes to dependents - add reference, then he clicked on the programm name created above;
+// So now the programm will depends not only by SDK, but for the Projects too;
+
+//first;
+
+
+	namespace Encapsulamento
+	{	
+		class SubCelebridade
+		{
+			// everybody;
+			public string InfoPublica = "Tenho um Instagram"; // public means that everybody can see this setence;
+			
+			// heritage;
+			protected string CordoOlho = "Verde"; // protected means that this setence will bee shared by heritage;
+			
+			// same project;
+			internal ulong NumeroCelular = 9999999111990; // internal means that all the people inside the same project than this will see this sentence;
+			
+			// heritage or same project;
+			 protected internal string JeitodeFalar = "Uso Muitas Gírias"; // when you use 2 conditions (protected and internal) ervery 2 situations can be view;
+			
+			// same class or heritage on the same projext (C# 7.2);
+			private protected string SegredoFamilia = "bla bla";
+			
+			bool UsaMuitoPhotoshop = true;
+			
+			public void MeusAcessos() {
+				Console.WriteLine("SubCelebridade");
+				
+				Console.WriteLine(InfoPublica);
+				Console.WriteLine(CordoOlho);
+				Console.WriteLine(NumeroCelular);
+				Console.WriteLine(JeitodeFalar);
+				Console.WriteLine(SegredoFamilia);
+				Console.WriteLine(UsaMuitoPhotoshop);
+				
+				
+			}
+			
+			
+			
+			
+			
+		}
+	
+	}
+  
+  // this is the first part of this programm: we will going to learn about the types of visibility;
