@@ -1,0 +1,18 @@
+using System;  // this is the class inside the encapsulamento class, (is an kind of "sub class");
+		//1			
+
+	class FilhoReconhecido : SubCelebridade;
+		public new void MeusAcessos() {
+			Console.WriteLine("Filho Reconhecido");
+			
+			Console.WriteLine(InfoPublica); // I can acess this cause it is public;
+			Console.WriteLine(CorDoOlho); // Like I sad on the first part, I can acess this variable cause it is on the same project like it;
+			Console.WriteLine(NumeroCelular); // I can acess cause it is near to father project;
+			Console.WriteLine(JeitodeFalar); // I can acess this in two ways: or internal or by heritage;
+			Console.WriteLine(SegredoFamilia); // same situation like above, but now is private, but shared by heritage;
+			Console.WriteLine(UsaMuitoPhotoshop); // This I cannot acess, cause this is private;
+		
+		}
+}
+
+// Results of visibility from SubCelebridade Class;
