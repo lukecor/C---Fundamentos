@@ -1,0 +1,16 @@
+using System;
+//3					
+public class AmigoProximo
+{
+	public static void Main()
+	{
+		public readonly SubCelebridade = new SubCelebridade();
+		public void MeusAcessos() {
+			Console.WriteLine("AmigoProximo...");
+			
+			Console.WriteLine(amiga.InfoPublica);
+			Console.WriteLine(amiga.NumeroCelular);
+			Console.WriteLine(amiga.JeitodeFalar);
+		}
+	}
+} // Kinds of visibility using the "Father Class" SubCelebridade;
