@@ -1,0 +1,42 @@
+using System;
+
+namespace CursoCSharp.OO
+{
+
+	public abstract class Celular { // on an abstract class you cannot instance the class to use, cause this is an concret thing;
+		public abstract string Assistence(); // and if you want to do heritages from Celular class, you have to turn then abstract to concret;
+		
+		public string Tocar() {
+			return "TRIM TRIM TRIM...";
+		
+		}
+	}
+	public class Samsung : Celular {
+		public override string Assistente() { // to use the abstract class you have to override the class on the heritaged method;
+			return "Olá! Meu nome é Bixby!";
+		}
+	public class IPhone : Celular {
+		public override string Assistente() {
+			return "Olá! Meu nome é Siri!";
+		}
+		
+	}
+	class Abstract {
+	
+		public static void Executar() {
+			var celulares = new List <Celular> {
+				new IPhone(),
+				new Samsung()
+			
+			};
+			foreach(var celular in celulares) {
+				Console.WriteLine(celular.Assistente());
+			}
+			
+			
+	
+	
+		}
+
+	}
+}
