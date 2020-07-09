@@ -1,0 +1,36 @@
+using System;
+
+public class Animal {
+	public string Nome  { get; set; }    // First I created my comportment to use on my programm;
+	
+	public Animal( string nome) {
+		Nome = nome;
+	}
+	
+public class Cachorro : Animal { // Cachorro is an Heritage from Animal;
+	public double Altura {get ; set; }
+	
+	public Cachorro (string nome) : base(nome) { // base has to be call because he is the base that will do the heritage steps;
+		Console.WriteLine( "Cachorro {0} foi inicializado", nome);
+	}
+	
+	public Cachorro(string nome, double altura) : this(nome) {
+		Altura = altura; // then i used the subclass Cachorro and put the comportments and heritages;
+	}
+	public override string ToString() {
+		return $"{Nome} tem {Altura} de altura! "; // and all the datas will be converted to String;
+	}
+	}
+	
+					
+public class ConstrutorThis
+{
+	public static void Executar()
+	{
+		var spike = new Cachorro("Spike"); // And Now I printed the informations above;
+		var max = new Cachorro("Max", 40.00);
+		
+		Console.WriteLine(spike);
+		Console.WriteLine(max);
+	}
+}
