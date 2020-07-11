@@ -18,7 +18,7 @@ public class ExemploLambda
 		};
 		Console.WriteLine(jogarDado());
 		
-		Func<int, string> conversorHex = numero => numero.ToString(" X ");
+		Func<int, string> conversorHex = numero => numero.ToString(" X "); // Lambda is an anonimous function, an kind of function inside an method;
 		Console.WriteLine(conversorHex(1234));
 		
 		Func<int, int, int, string> formatarData = (dia, mes, ano) =>
