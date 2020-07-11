@@ -1,0 +1,30 @@
+using System;
+			
+sealed class SemFilho {
+	public double ValorFortuna() { // sealed means that you cannot use this class to heritage;
+		return 100000000;
+	}
+
+}
+
+class Avo {
+	public virtual bool HonrarNomeFamilia() {
+		return true;
+	}// virtual means that you can overrite this programm;
+}
+
+class Pai : Avo {
+	public override sealed bool HonrarNomeFamilia() { // this operator is sealed, even if the method is overrided;
+		return true;
+	}
+
+}
+public class Saled
+{
+	public static void Executar()
+	{
+		SemFilho = new SemFilho();
+		Console.WriteLine(semFilho.ValorFortuna());
+		
+	}
+}
