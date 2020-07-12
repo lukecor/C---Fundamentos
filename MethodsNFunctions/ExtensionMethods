@@ -1,0 +1,23 @@
+using System;
+
+public static class ExtensoesInteiro {
+	public static int Soma(this int num, int outroNumero) { // this means that you are creating an extension to int;
+		return num + outroNumero;	
+	}
+	public static int Subtracao(this int num, int outroNumero) {
+		return num - outroNumero;
+	
+	}
+
+}
+class MetodosDeExtensao {
+	
+	public static void Main() {
+		int numero = 5; // you dont need to create an complete method inside you programm, cause you created an extension method;
+		
+		Console.WriteLine(numero.Soma(5));
+		Console.WriteLine(numero.Subtracao(5));
+	}
+
+
+}
