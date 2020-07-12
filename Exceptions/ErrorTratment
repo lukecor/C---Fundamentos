@@ -1,0 +1,32 @@
+using System;
+	
+public class Conta {
+	double Saldo;
+	
+	public Conta(double saldo) {
+	Saldo = saldo;
+	}
+	
+	public void Sacar(double valor) {
+		if(valor > Saldo) {
+			throw new ArgumentException("Saldo Insuficiente. ");
+		
+		} 	Saldo -= valor;
+	}
+}
+public class PrimeiraExcecao
+{
+	public static void Main()
+	{
+	var conta = new Conta(1_223.45);
+		
+	try { // maybe try can do an error, like TryParse;
+		conta.Sacar(1600);
+		Console.WriteLine("Retirada com Sucesso");
+	} catch (Exception ex) {
+		Console.WriteLine(ex.Message);
+	} finally {
+		Console.WriteLine("Obrigado!");	
+	}
+	}
+}
