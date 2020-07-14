@@ -1,4 +1,4 @@
-using System;
+using System; // In this exercise we will going to create an archive to use it on an programm;
 using System.IO;
 
 
