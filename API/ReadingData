@@ -1,0 +1,29 @@
+using System;
+using System.IO;
+					
+public class LendoArquivos
+{
+	
+	public static void Main()
+	{
+		var path = @"~/lendo_arquivos.txt".ParseHome();
+		
+		if(!File.Exists(path)) { // I used ! to say "If this file doesn't exist, create it";
+		using (StreamWriter sw = File.AppendAllText(path)) { 		// streamwriter means that the compilator will create an archive and write what is inside here {};
+			sw.WriteLine("Produto; Preço; Quantidade");
+			sw.WriteLine("Caneta Bic Preta; 3.59; 89");
+			sw.WriteLine("Borracha Branca; 2.89; 27");
+			}
+		}
+		try {
+			using(StreamReader sr = new StreamReader(path)) {
+				var texto = sr.ReadToEnd();
+				Console.WriteLine(texto);
+			} catch (Exception ex) {
+				Console.WriteLine(ex.Message);
+			
+				}
+		
+		}
+	}
+}
