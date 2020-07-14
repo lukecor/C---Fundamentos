@@ -1,0 +1,41 @@
+using System;
+using System.IO;
+
+
+public static class ExtensaoString {
+	public static ParseHome(this string path) {
+		string home = (Environment.OSVersion.Platform == PlatformID.Unix ||
+		Environment.OSVersion.Platform == PlatformID.MacOSX)
+		? Environment.GetEnvironmentVariable("HOME")
+			Envrironment.ExpandEnvironmentVariables(%HOMEDRIVE%%HOMEPATH%);
+		
+	return path.Replace("~", home);
+	}
+}
+public class PrimeiroArquivo {
+	
+	public static void Main() {
+		var path = @"~/primeiro_arquivo.txt".ParseHome(); // ~means "home", like c://;
+		
+		if(!File.Exists(path)) {
+			using (StreamWriter sw = File.CreateText(path)) {
+				sw.WriteLine("Esse");
+				sw.WriteLine(" é");
+				sw.WriteLine(" o");
+				sw.WriteLine(" nosso ");
+				sw.WriteLine("Primeiro arquivo");
+				
+			}
+		}	
+		using (StreamWriter sw = File.AppendText(path)) {
+				sw.WriteLine("");
+				sw.WriteLine("é possivel adicionar mais texto!");
+		
+		}
+	}
+		
+}
+		
+	
+
+
