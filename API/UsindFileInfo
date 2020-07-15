@@ -1,0 +1,41 @@
+using System;
+using System.IO; // On this exercise we will use the FileInfo to inform the things about the archive created on this programm;
+
+
+
+public class ExemploFileInfo
+{
+	public static void ExcluirSeExistir(params string[] caminhos) {
+		foreach (caminho in caminho) {
+			FileInfo arquivo = new FileInfo(caminho); // and finally on this programm we used this method to exclude every archive created before this;
+			
+			if(arquivo.Exists) {
+				arquivo.Delete;
+			}
+		
+		}
+	
+	}
+	
+	public static void Main() {
+		var caminhoOrigem = @"~/arq_origem.txt".ParseHome();
+		var caminhoDestino = @"~/arq_destino.txt".ParseHome();
+		var caminhoCopia = @"~/arq_copia;txt".ParseHome(); // First we created the archive to use on this exercise (base from API);
+		
+		ExcluirSeExistir(caminhoOrigem, caminhoDestino, caminhoCopia);
+		
+		using( StreamWriter sw = File.CreateText(caminhoOrigem)) { // then we use the archive using to "download the parameters to use here, then we created the first archive";
+			sw.WriteLine("Arquivo Original! ");
+		}
+		FileInfo origem = new FileInfo(caminhoOrigem); // we instanced it to create the informations about the archive;
+		Console.WriteLine(origem.Name);
+		Console.WriteLine(origem.IsReadOnly);
+		Console.WriteLine(origem.FullName);
+		Console.WriteLine(origem.Extension);
+		
+		origem.CopyTo(caminhoCopia); // and copy the parameters to create the same programm to use on Copia and Destino;
+		origem.MoveTo(caminhoDestino);
+	
+	}
+
+}
