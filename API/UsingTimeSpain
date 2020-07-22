@@ -1,0 +1,41 @@
+using System;
+using System.IO;
+	
+	
+	
+public class UsandoTimeSpan {
+
+	public static void Main() {
+	
+		var intervalo = new TimeSpan(days: 10, hours: 20, minutes: 30, seconds: 40); // Time spain is usefull to show the range of time that you can use on an console.writeline;
+		
+		Console.WriteLine(intervalo);
+		
+		Console.WriteLine("Minutos: " + intervalo.Minutes);
+		Console.WriteLine("Intervalo em minutos: " + intervalo.TotalMinutes);
+		
+		
+		var largada = DateTime.Now;
+		var chegada = DateTime.Now.AddMinutes(15);
+		
+		var tempo = chegada - largada;
+		
+		Console.WriteLine("Duração: " + tempo);
+		
+		
+		Console.WriteLine(intervalo.Add(TimeSpan.FromMinutes(8)));
+		Console.WriteLine(intervalo.Subtract(TimeSpan.FromMinutes(8)));
+		Console.WriteLine(intervalo);
+		
+		
+		Console.WriteLine("To String 1: " + intervalo.ToString("g"));
+		Console.WriteLine("To String 2: " + intervalo.ToString("G"));
+		Console.WriteLine("To String 3: " + intervalo.ToString("C"));
+		
+
+		Console.WriteLine("Parse: " + TimeSpan.Parse("01:02:03").TotalMilliseconds);
+		
+	}
+
+
+}
