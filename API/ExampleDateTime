@@ -1,0 +1,48 @@
+using System;
+using System.IO;
+
+
+public class ExemploDateTime
+{
+	
+	public static void Main()
+	{
+		var dateTime = new DateTime(year: 2030, day: 2,month: 6);
+		
+		Console.WriteLine(dateTime.Day);
+		Console.WriteLine(dateTime.Month); 
+		Console.WriteLine(dateTime.Year);
+		
+		
+		var hoje = DateTime.Today;
+		
+		Console.WriteLine(hoje); // This method can be usefull when you want to print the data from the day that you are using;
+		
+		
+		// And it has many ways to write;
+		
+		var diaAtual = DateTime.Now;
+		Console.WriteLine(diaAtual);
+		Console.WriteLine("Hora: " + diaAtual.Hour);
+		Console.WriteLine("Minutos: " + diaAtual.Minute); \\ here we had an string plus the method that we want to print;
+		
+		
+		var amanha = diaAtual.AddDays(1);
+		Console.WriteLine(amanha);
+		
+		
+		var ontem = diaAtual.AddDays(-1); \\ here is possible to print the day before today (yesterday) and today like above;
+		Console.WriteLine(ontem);
+		
+		
+		Console.WriteLine(diaAtual.ToString("dd"));
+		Console.WriteLine(diaAtual.ToString("d"));
+		Console.WriteLine(diaAtual.ToString("D"));
+		Console.WriteLine(diaAtual.ToString("g"));
+		Console.WriteLine(diaAtual.ToString("G")); \\ and finally here you can print day datas created before using many convertions;
+    
+		
+						  
+		
+	}
+}
