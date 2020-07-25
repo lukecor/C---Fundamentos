@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+
+
+public class Dynamics {
+
+	public static void Main() {
+		dynamic meuObjeto = "teste";
+		meuObjeto = 3;
+		
+		meuObjeto ++;
+		
+		Console.WriteLine(meuObjeto);
+		
+		dynamic aluno = new System.Dynamic.ExpandoObject();
+	
+	
+	}
+
+
+
+
+}
